@@ -8,4 +8,4 @@ def supp_parenthese(ch,i,p):
     else :
         return supp_parenthese(ch,i-1,p)
 
-print(supp_parenthese("hello(deleted)whend no this is (deleted lol)",len("hello(deleted)whend no this is (deleted lol)")-1,0))
+print(supp_parenthese("BONJOIUR (dmsmmf) bonsoir",len("BONJOIUR (dmsmmf) bonsoir")-1,0))
