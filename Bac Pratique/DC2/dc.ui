@@ -106,8 +106,8 @@
   <widget class="QRadioButton" name="courant">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>340</y>
+     <x>250</x>
+     <y>300</y>
      <width>111</width>
      <height>21</height>
     </rect>
@@ -122,8 +122,8 @@
   <widget class="QRadioButton" name="eparn">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>340</y>
+     <x>450</x>
+     <y>300</y>
      <width>121</width>
      <height>21</height>
     </rect>
@@ -135,8 +135,8 @@
   <widget class="QPushButton" name="mdp">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>390</y>
+     <x>240</x>
+     <y>350</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -148,8 +148,8 @@
   <widget class="QPushButton" name="afficher">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>390</y>
+     <x>440</x>
+     <y>350</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -163,7 +163,7 @@
     <rect>
      <x>10</x>
      <y>430</y>
-     <width>801</width>
+     <width>491</width>
      <height>192</height>
     </rect>
    </property>
@@ -203,6 +203,16 @@
      <string>Mot de passe</string>
     </property>
    </column>
+  </widget>
+  <widget class="QListWidget" name="list">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>410</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>

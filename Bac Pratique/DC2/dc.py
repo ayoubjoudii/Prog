@@ -63,11 +63,29 @@ def generer():
         d["n"] = n
         d["p"] = p
         d["mdp"] = md
-        f = open("Bac Pratique/DC2/mdpass.dat","wb")
+        f = open("mdpass.dat","ab")
         dump(d,f)
         f.close()
 def afficher():
-    fb = open("Bac Pratique/DC2/mdpass.dat","rb")
+    def div(n):
+        ch = "132"
+        n = str(n)
+        while len(n) > 1:
+            i = len(n)
+            sig = 1
+            k = 0
+            x = 0
+            while i > 0 :
+                i = i-1
+                x = x + int(n[i])*(int(ch[k])*sig)
+                k = k +1 
+                if k == 3: 
+                    sig = -sig
+                    k = 0
+            n = str(x)
+        return n == "0" or n == "7"
+    w.list.addItem("le code divisble par 7 :")
+    fb = open("mdpass.dat","rb")
     fin = True
     i = 0
     while fin:
@@ -79,6 +97,8 @@ def afficher():
             w.table.setItem(i,2,QTableWidgetItem(x["p"]))
             w.table.setItem(i,3,QTableWidgetItem(x["cnt"]))
             w.table.setItem(i,4,QTableWidgetItem(x["mdp"]))
+            if div(x["c"][0]) : 
+                w.list.addItem(x["n"]+" "+x["p"])
             i = i +1
         except:
             fin = False 
@@ -92,7 +112,7 @@ client = {
     "mdp" : str
 }
 app = QApplication([])
-w = loadUi("Bac Pratique/DC2/dc.ui")
+w = loadUi("dc.ui")
 w.show()
 w.mdp.clicked.connect(generer)
 w.afficher.clicked.connect(afficher)

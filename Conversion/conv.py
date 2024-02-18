@@ -7,4 +7,4 @@ def conv(x,b):
                 x = x//b
                 c = xr[r] + c
             return c
-print(conv(10,8))
+print(conv(10,8)) #12 
