@@ -45,10 +45,8 @@ def ajouter():
          
 def affchance():
     f = open("chance.txt","r")
-    x = f.readline()
-    while x != "":
-        w.chance.addItem(x)
-        x = f.readline()
+    x = f.read()
+    w.chance.addItem(x)
     
 def affclient():
     f = open("clients.dat","rb")
