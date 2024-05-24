@@ -6,4 +6,11 @@ def palind(ch):
     else : 
         return palind(ch[1:len(ch)-1])
     
-print(palind("radar"))
+def palind1(ch):
+    ch1 =""
+    for i in range(len(ch)):
+        ch1 = ch[i] +ch1
+
+    return ch1==ch
+    
+print(palind1("radar"))
