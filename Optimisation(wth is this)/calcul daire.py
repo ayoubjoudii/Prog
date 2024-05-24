@@ -16,7 +16,7 @@ def rect(n):
     # au milieu : x = a + h/2 , tawa hetha info ? 
     s = 0
     for i in range(n): 
-        s = s + f(x)
+        s = s + f(x)            
         x = x + h
     return s*h 
 def trap(n): # hethi ada9
